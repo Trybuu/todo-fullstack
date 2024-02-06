@@ -16,14 +16,11 @@ function Modal({ mode, showModal, task, getData }) {
     e.preventDefault()
 
     try {
-      const res = await fetch(
-        'https://todoapp-server-xwnw.onrender.com/todos',
-        {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data),
-        },
-      )
+      const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/todos`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      })
       if (res.status === 200) {
         console.log('✅ New task added')
         showModal(false)
@@ -39,7 +36,7 @@ function Modal({ mode, showModal, task, getData }) {
 
     try {
       const res = await fetch(
-        `https://todoapp-server-xwnw.onrender.com/${task.id}`,
+        `${import.meta.env.VITE_SERVER_URL}/todos/${task.id}`,
         {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },

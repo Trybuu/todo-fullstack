@@ -14,8 +14,10 @@ function App() {
   const getData = async () => {
     try {
       const res = await fetch(
-        `https://todoapp-server-xwnw.onrender.com/${userEmail}`,
+        `${import.meta.env.VITE_SERVER_URL}/todos/${userEmail}`,
       )
+      console.log(`⚠️ RESPONSE ⚠️`)
+      console.log(res)
       const data = await res.json()
       setTasks(data)
     } catch (err) {

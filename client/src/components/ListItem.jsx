@@ -9,7 +9,7 @@ function ListItem({ task, getData }) {
   async function deleteItem() {
     try {
       const res = await fetch(
-        `https://todoapp-server-xwnw.onrender.com/${task.id}`,
+        `${import.meta.env.VITE_SERVER_URL}/todos/${task.id}`,
         {
           method: 'DELETE',
         },
