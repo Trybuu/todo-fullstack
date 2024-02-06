@@ -14,7 +14,7 @@ function App() {
   const getData = async () => {
     try {
       const res = await fetch(
-        `https://todo-fullstack-app-3srp.onrender.com/${userEmail}`,
+        `https://todoapp-server-xwnw.onrender.com/${userEmail}`,
       )
       const data = await res.json()
       setTasks(data)

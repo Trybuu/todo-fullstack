@@ -17,7 +17,7 @@ function Modal({ mode, showModal, task, getData }) {
 
     try {
       const res = await fetch(
-        'https://todo-fullstack-app-3srp.onrender.com/todos',
+        'https://todoapp-server-xwnw.onrender.com/todos',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -39,7 +39,7 @@ function Modal({ mode, showModal, task, getData }) {
 
     try {
       const res = await fetch(
-        `https://todo-fullstack-app-3srp.onrender.com/todos/${task.id}`,
+        `https://todoapp-server-xwnw.onrender.com/${task.id}`,
         {
           method: 'PUT',
           headers: { 'Content-type': 'application/json' },

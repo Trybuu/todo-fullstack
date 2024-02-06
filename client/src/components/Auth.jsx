@@ -25,7 +25,7 @@ function Auth() {
     }
 
     const res = await fetch(
-      `https://todo-fullstack-app-3srp.onrender.com/${endpoint}`,
+      `https://todoapp-server-xwnw.onrender.com/${endpoint}`,
       {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
