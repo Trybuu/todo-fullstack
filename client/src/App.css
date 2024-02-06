@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+/* STYLES */
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item__main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-item__button {
+  margin: 0 0 0 0.5rem;
+}
