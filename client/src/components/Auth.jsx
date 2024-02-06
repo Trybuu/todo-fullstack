@@ -24,11 +24,14 @@ function Auth() {
       return
     }
 
-    const res = await fetch(`${import.meta.env.VITE_SERVER_URL}/${endpoint}`, {
-      method: 'POST',
-      headers: { 'Content-type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    })
+    const res = await fetch(
+      `https://todo-fullstack-app-3srp.onrender.com/${endpoint}`,
+      {
+        method: 'POST',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      },
+    )
 
     const data = await res.json()
     if (data.detail) {

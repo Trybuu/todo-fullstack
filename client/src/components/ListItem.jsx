@@ -9,7 +9,7 @@ function ListItem({ task, getData }) {
   async function deleteItem() {
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_SERVER_URL}/todos/${task.id}`,
+        `https://todo-fullstack-app-3srp.onrender.com/todos/${task.id}`,
         {
           method: 'DELETE',
         },

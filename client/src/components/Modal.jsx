@@ -16,11 +16,14 @@ function Modal({ mode, showModal, task, getData }) {
     e.preventDefault()
 
     try {
-      const res = await fetch('http://localhost:8000/todos', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      })
+      const res = await fetch(
+        'https://todo-fullstack-app-3srp.onrender.com/todos',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        },
+      )
       if (res.status === 200) {
         console.log('✅ New task added')
         showModal(false)
@@ -35,11 +38,14 @@ function Modal({ mode, showModal, task, getData }) {
     e.preventDefault()
 
     try {
-      const res = await fetch(`http://localhost:8000/todos/${task.id}`, {
-        method: 'PUT',
-        headers: { 'Content-type': 'application/json' },
-        body: JSON.stringify(data),
-      })
+      const res = await fetch(
+        `https://todo-fullstack-app-3srp.onrender.com/todos/${task.id}`,
+        {
+          method: 'PUT',
+          headers: { 'Content-type': 'application/json' },
+          body: JSON.stringify(data),
+        },
+      )
 
       if (res.status === 200) {
         showModal(false)

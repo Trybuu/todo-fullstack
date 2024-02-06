@@ -13,7 +13,9 @@ function App() {
 
   const getData = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/todos/${userEmail}`)
+      const res = await fetch(
+        `https://todo-fullstack-app-3srp.onrender.com/${userEmail}`,
+      )
       const data = await res.json()
       setTasks(data)
     } catch (err) {
